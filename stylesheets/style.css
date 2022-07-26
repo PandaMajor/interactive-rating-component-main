@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root {
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(217, 12%, 63%);
+    --med-gray: hsl(216, 12%, 54%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --darker-blue: hsl(216, 12%, 8%);
+    --rating-bg: hsl(210, 19%, 24%);
+    --rating-text: hsl(216, 8%, 52%);
+    --card-bg-dark: 	hsl(215, 25%, 14%);
+    --card-bg-light: hsl(217, 15%, 17%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--darker-blue);
+    width: 100%;
+    height: 100vh;  /* viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+}
+
+.circle {
+    background-color: var(--rating-bg);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin: 0 0 20px 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.card {
+    border-radius: 20px;
+    background-image: linear-gradient(var(--card-bg-light), var(--card-bg-dark));
+    min-width: 300px;
+    width: 25%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.questionnaire {
+    width: 100%;
+    flex-direction: column;
+    padding: 35px 40px;
+}
+
+h1 {
+    font-family: 'Overpass', sans-serif;
+    font-weight: 700;
+    color: var(--white);
+    margin: 0 0 20 px;
+}
+
+p {
+    font-family: 'Overpass', sans-serif;
+    font-size: 15px;
+    color: var(--light-gray);
+    margin: 10px 0 20px 0;
+    line-height: 1.5;
+}
+
+button {
+    border-radius: 25px;
+    border: none;
+}
+
+#btn-group {
+    display: flex;
+    flex-direction: row;
+}
+
+.rating {
+    font-family: 'Overpass', sans-serif;
+    font-size: 15px;
+    color: var(--rating-text);
+    background-color: var(--rating-bg);
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.rating:hover {
+    background-color: var(--light-gray);
+    color: var(--white);
+}
+
+#submit {
+    font-family: 'Overpass', sans-serif;
+    font-size: 15px;
+    background-color: var(--orange);
+    color: var(--white);
+    margin: 5px 5px 0 0;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0 0 0;
+    padding: 10px 0 10px 0;
+    letter-spacing: 2px;
+}
+
+#submit:hover {
+    background-color: var(--white);
+    color: var(--orange);
+}
