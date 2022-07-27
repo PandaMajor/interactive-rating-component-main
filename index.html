@@ -5,18 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="stylesheets/style.css">
-  <script src="scripts/rating.js"></script>
+  <script type="text/javascript" src="scripts/rating.js"></script>
   <title>Frontend Mentor | Interactive rating component</title>
 </head>
-<body>
-  <div class="card">
+<body onload="init()">
+  <!-- prompt for user input -->
+  <div class="card" id="prompt">
     <div class="questionnaire">
       <div class="circle">
         <img src="images/icon-star.svg" alt="Star icon">
       </div>
       <h1>How did we do?</h1>
-      <p>Please let us know how we did with your support request. All feedback is appreciated 
-        to help us improve our offering!</p>
+      <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
       <div id="btn-group">
         <button type="button" class="rating">1</button>
         <button type="button" class="rating">2</button>
@@ -27,5 +27,22 @@
       <button type="submit" id="submit">SUBMIT</button>
     </div>
   </div>
+
+  <!-- user submitted response -->
+  <div class="card" id="thank-you">
+    <div class="questionnaire" id="ty">
+      <div id="thank-you-img">
+        <img src="images/illustration-thank-you.svg" alt="Thank you icon">
+      </div>
+      <div id="user-selection">
+        <p id="user-select"></p>
+      </div>
+      <h1 class="center">Thank you!</h1>
+      <div class="center">
+        <p class="center">We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch!</p>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>

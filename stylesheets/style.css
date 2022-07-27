@@ -2,6 +2,7 @@
 
 :root {
     --orange: hsl(25, 97%, 53%);
+    --light-orange: hsl(25, 95%, 64%);
     --white: hsl(0, 0%, 100%);
     --light-gray: hsl(217, 12%, 63%);
     --med-gray: hsl(216, 12%, 54%);
@@ -47,25 +48,44 @@ body {
     display: flex;
 }
 
-.card {
+.card{
+    display: flex;
     border-radius: 20px;
     background-image: linear-gradient(var(--card-bg-light), var(--card-bg-dark));
-    min-width: 300px;
+    min-width: 350px;
     width: 25%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card#prompt {
+    display: flex;
+}
+
+.card#thank-you {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .questionnaire {
     width: 100%;
     flex-direction: column;
-    padding: 35px 40px;
+    padding: 25px 25px;
+}
+
+.questionnaire#ty {
+    padding: 25px 30px;
 }
 
 h1 {
     font-family: 'Overpass', sans-serif;
     font-weight: 700;
     color: var(--white);
-    margin: 0 0 20 px;
+    margin: 0 0 20px;
+}
+h1.center {
+    margin: 10px 0;
 }
 
 p {
@@ -74,6 +94,15 @@ p {
     color: var(--light-gray);
     margin: 10px 0 20px 0;
     line-height: 1.5;
+}
+
+p#user-select {
+    margin: 0 0 0 0;
+    color: var(--light-orange);
+    background-color: var(--rating-bg);
+    border-radius: 25px;
+    width: auto;
+    padding: 4px 12px;
 }
 
 button {
@@ -96,11 +125,12 @@ button {
     margin: auto;
     justify-content: center;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .rating:hover {
-    background-color: var(--light-gray);
-    color: var(--white);
+    background-color: var(--light-gray) !important;     /* !important needed for functionality after js */
+    color: var(--white) !important;
 }
 
 #submit {
@@ -116,9 +146,31 @@ button {
     margin: 30px 0 0 0;
     padding: 10px 0 10px 0;
     letter-spacing: 2px;
+    cursor: pointer;
 }
 
 #submit:hover {
     background-color: var(--white);
     color: var(--orange);
+}
+
+#thank-you-img {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+#user-selection {
+    width: auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 20px 0;
+}
+
+.center { 
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
 }
