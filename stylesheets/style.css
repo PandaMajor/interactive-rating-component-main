@@ -149,9 +149,11 @@ button {
     cursor: pointer;
 }
 
-#submit:hover {
-    background-color: var(--white);
-    color: var(--orange);
+@media(hover: hover ) and (pointer: fine) {
+    #submit:hover {
+        background-color: var(--white);
+        color: var(--orange);
+    }
 }
 
 #thank-you-img {
